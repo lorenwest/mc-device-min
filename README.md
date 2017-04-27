@@ -41,7 +41,7 @@ The device must be in configuration mode as a WiFi hotspot, broadcasting an SSID
 
 Once the user confirms their intent to install the device, the `microclimates` section of the `package.json` for your module will be downloaded, validated, and presented to the user. 
 
-Upon installation, your device will be configured to connect to the secure Microclimates network, the shared MQTT message bus, and be controlled by [node-red](http://nodered.org/) flows and external [Climate Control API](https://microclimates.com/api/v1/).
+Upon installation, your device will be configured to connect to the secure Microclimates network, the shared MQTT message bus, and be controlled by [node-red](http://nodered.org/) flows and the external [Climate Control API](https://microclimates.com/api/v1/).
 
 License
 -------
