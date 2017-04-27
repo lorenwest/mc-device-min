@@ -1,8 +1,10 @@
-Microclimates Device - Minimum
-==============================
+Minimum Secure Microclimates Device
+===================================
 
 This repository contains the minimum requirements for installing your device
 into a secure [Microclimates](https://www.microclimates.com) network.
+
+It's designed to be used as a template for your own device module.
 
 While there is no requirement for this to install a device, it will allow
 the device be installed without the security warning.
@@ -15,13 +17,11 @@ and [privacy policy](https://www.microclimates.com/device-privacy-policy).
 Device Requirements
 -------------------
 
-Any device following the open source [Homie convention](https://github.com/marvinroger/homie)
-can be added to the secure Microclimates network.
-
-It has been tested using the [ESP8266](https://github.com/marvinroger/homie-esp8266) homie
+Any device following the [Homie convention](https://github.com/marvinroger/homie)
+can be added to the secure Microclimates network. It has been tested using the [ESP8266](https://github.com/marvinroger/homie-esp8266) homie
 library.
 
-In order to find this module it must be published to npm, and the following must be in the device settings section of the [JSON configuration file](https://homie-esp8266.readme.io/docs/json-configuration-file) on the device:
+In order to find your device module it must be published to npm, and the following must be in the device settings section of the [JSON configuration file](https://homie-esp8266.readme.io/docs/json-configuration-file) on the device:
 
 ```
 {
@@ -37,11 +37,11 @@ If the `npm-module` value contains a semver range as in the above example, autom
 Installing
 ----------
 
-The device must be in configuration mode and broadcasting an SSID. If the SSID begins with `homie-` or `microclimates-`, the Microclimates hub will find it without asking the user to view all available SSIDs.
+The device must be in configuration mode as a WiFi hotspot, broadcasting an SSID. If the SSID begins with `homie-` or `microclimates-`, the Microclimates hub will find it without asking the user to view all available SSIDs.
 
-Once the user confirms their intent to install the device, the `microclimates` section of the `package.json` for this module will be downloaded, validated, and presented to the user. 
+Once the user confirms their intent to install the device, the `microclimates` section of the `package.json` for your module will be downloaded, validated, and presented to the user. 
 
-Upon installation, your device will be configured to connect to the secure Microclimates network, the shared MQTT message bus, be controlled by the [node-red](http://nodered.org/) flows, and the external [Climate Control API](https://microclimates.com/api/v1/).
+Upon installation, your device will be configured to connect to the secure Microclimates network, the shared MQTT message bus, and be controlled by [node-red](http://nodered.org/) flows and external [Climate Control API](https://microclimates.com/api/v1/).
 
 License
 -------
